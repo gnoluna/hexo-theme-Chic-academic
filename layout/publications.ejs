@@ -15,14 +15,14 @@
       <a class="publication-item-link" href="<%- url_for(post.path) %>"><b><%= post.title %></b></a>
     </div>
     <a href="<%= post.link %>">
-      <div class="publication-item-inner" style="width: 30%; margin-top: 2em;">
+      <div class="publication-item-inner" style="width: fit-content; margin-top: 2em;">
         <img src="<%- url_for(post.path) %><%= post.photos[0] %>" class="publication-item-img" />
       </div>
-      <div class="publication-item-inner" style="width: 60%;">
+      <div class="publication-item-inner" style="width: auto;">
         <%- markdown(post.content)  %>
       </div>
     </a>
-      <span class="publication-item-date"><%- date(post.date, theme.date_format) %></span>
+    <span class="publication-item-date"><%- date(post.date, theme.date_format) %></span>
   </article>
   <% }}) %>
   <%- partial('_partial/paginator') %>
