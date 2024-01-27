@@ -1,0 +1,27 @@
+<div class="post-wrap publication">
+  <h2>Publications</h2>
+  <% var last_year = ''; %>
+  <% site.posts.each(function (post) { %>
+  <% if (post.layout == 'publication'){ %>
+
+  <% var cur_year = post.date.year(); %>
+
+  <% if(last_year !== cur_year){ %>
+  <h3><%- cur_year %></h3>
+  <% last_year = cur_year; } %>
+
+  <article class="publication-item">
+    <div>
+      <a class="publication-item-link" href="<%- url_for(post.path) %>"><b><%= post.title %></b></a>
+    </div>
+    <div class="publication-item-inner" style="width: 30%; margin-top: 2em;">
+      <img src="<%- url_for(post.path) %><%= post.photos[0] %>" class="publication-item-img" href="<%= post.link %>" />
+    </div>
+    <div class="publication-item-inner" style="width: 50%;">
+      <%- markdown(post.content)  %>
+    </div>
+    <span class="publication-item-date"><%- date(post.date, theme.date_format) %></span>
+  </article>
+  <% }}) %>
+  <%- partial('_partial/paginator') %>
+</div>

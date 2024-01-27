@@ -1,0 +1,47 @@
+.post-wrap
+  position relative
+  width 100%
+  max-width 780px
+  margin 0 auto
+  padding-top 2rem
+
+  .publication-item
+    margin-left 2rem
+
+.publication-item-link
+    display inline-block
+    text-decoration none
+    text-overflow ellipsis
+    white-space nowrap
+    overflow hidden
+    &:hover
+      color $light-global-link-hover-color
+      background-color transparent
+    
+    .dark-theme &
+      color $dark-global-link-color
+      text-decoration none
+      transition color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease
+
+      &:hover
+        color $dark-global-link-hover-color
+        text-decoration none
+        transition color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease
+
+.publication-item-inner
+    display: inline-block
+    overflow hidden
+    margin: 1em
+    vertical-align: top
+    height: 13em
+
+.publication-item-date
+    float right
+    text-align right
+    color $light-font-secondary-color
+
+    .dark-theme & 
+        color $dark-font-secondary-color
+
+.publication-item-img
+    width: 100%
