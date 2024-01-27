@@ -11,14 +11,16 @@
 
         <% if(page.date && theme.post_date_enable){ %>
         <span class="post-time">
-          Date: <a href="#"><%- date(page.date, theme.date_format)  %>&nbsp;&nbsp;<%- time(page.date, theme.time_format)%></a>
+          Date: <a href="#"><%- date(page.date, theme.date_format)  %></a>
         </span>
         <% } %>
+        Project: <a itemprop="Archiv" href="<%= page.link %>">Project page</a>
       </div>
       <% } %>
     </header>
 
     <div class="post-content">
+      <img src="<%= page.photos[0] %>" />
       <%- page.content %>
     </div>
 

@@ -29,11 +29,13 @@
         transition color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease
 
 .publication-item-inner
-    display: inline-block
-    overflow hidden
-    margin: 1em
+    display inline-block
+    overflow-x hidden
+    margin 1em
     vertical-align: top
-    height: 13em
+    height 13em
+    -ms-overflow-style none
+    scrollbar-width none
 
 .publication-item-date
     float right
@@ -45,3 +47,6 @@
 
 .publication-item-img
     width: 100%
+
+.publication-item-inner::-webkit-scrollbar 
+    display none
