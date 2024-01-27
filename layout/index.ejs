@@ -1,6 +1,12 @@
 <% if(is_home()) {%>
+<div style="width:70%;margin:auto">
+  <div class="left-panel">
     <%- partial('_page/profile') %>
+  </div>
+  <div class="right-panel">
     <% var about_page=site.pages.findOne({title:"About"}); %>
     <%- partial('_page/page', {page: about_page, page_title_disable: true}) %>
     <%- partial('publications') %>
+  </div>
+</div>
 <%}%>
