@@ -4,7 +4,8 @@ navname: Bentham's Blog
 # navigatior items
 nav:
   Posts: /archives
-  Categories: /category
+  # Categories: /category
+  Publications: /publications
   Tags: /tag
   About: /about
 

@@ -1,3 +1,6 @@
 <% if(is_home()) {%>
     <%- partial('_page/profile') %>
+    <% var about_page=site.pages.findOne({title:"About"}); %>
+    <%- partial('_page/page', {page: about_page, page_title_disable: true}) %>
+    <%- partial('publications') %>
 <%}%>
